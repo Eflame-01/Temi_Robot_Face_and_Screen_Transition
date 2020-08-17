@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridForMainMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mainMenuTitle"
+            android:layout_width="1213dp"
+            android:layout_height="103dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/menu_title"
+            android:textColor="?attr/colorBackgroundFloating"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintHeight_percent=".2"
+            app:layout_constraintWidth_percent="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/menuButton0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="40dp"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/button_text0"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/menuButton1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="40dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/button_text1"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/menuButton2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/button_text2"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/menuButton3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="40dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/button_text3"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/menuButton4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/button_text4"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/menuButton5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/button_text5"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

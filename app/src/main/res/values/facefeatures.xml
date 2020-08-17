@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="left_eye_of_robot_s_face">Left eye of robot\'s face</string>
+    <string name="right_eye_of_robot_s_face">Right eye of robot\'s face</string>
+    <string name="robot_s_nose">Robot\'s nose</string>
+    <string name="robot_s_mouth">Robot\'s mouth</string>
+    <color name="faceColor">#765B43</color>
+</resources>

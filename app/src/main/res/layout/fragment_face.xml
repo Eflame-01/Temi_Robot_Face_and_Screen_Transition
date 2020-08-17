@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/faceFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/faceColor"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".FaceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/eyeGuide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <ImageView
+            android:id="@+id/rightEye"
+            android:layout_width="244dp"
+            android:layout_height="244dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/eyeGuide"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintTop_toTopOf="@+id/eyeGuide"
+            app:srcCompat="@drawable/simple_eyes4" />
+
+        <ImageView
+            android:id="@+id/leftEye"
+            android:layout_width="244dp"
+            android:layout_height="244dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/eyeGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toTopOf="@+id/eyeGuide"
+            app:srcCompat="@drawable/simple_eyes4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/noseGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <ImageView
+            android:id="@+id/nose"
+            android:layout_width="187dp"
+            android:layout_height="161dp"
+            app:layout_constraintBottom_toTopOf="@+id/noseGuide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/noseGuide"
+            app:layout_constraintVertical_bias="0.458"
+            app:srcCompat="@drawable/nose_placeholder" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mouthGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <ImageView
+            android:id="@+id/mouth"
+            android:layout_width="574dp"
+            android:layout_height="126dp"
+            app:layout_constraintBottom_toTopOf="@+id/mouthGuide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mouthGuide"
+            app:srcCompat="@drawable/mouth_placeholder" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

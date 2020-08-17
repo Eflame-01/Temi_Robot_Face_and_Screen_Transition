@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Temi Demo for February-19</string>
+    <string name="menu_title">Social Robot Research Demo</string>
+    <string name="button_text0">Transition: To Corner</string>
+    <string name="button_text1">Transition: Eyes to Bottom</string>
+    <string name="button_text2">Transition: Slide Left and Return</string>
+    <string name="button_text3">Transition: Fade</string>
+    <string name="button_text4">Transition: Shrink</string>
+    <string name="button_text5">End Demonstration</string>
+
+
+    <string name="quiz_title">Which of the following sentences is correct?</string>
+    <string name="quiz0">Michael hablar con su padre.</string>
+    <string name="quiz1">Michael hablo con su padre.</string>
+    <string name="quiz2">Michael habló con su padre.</string>
+    <string name="quiz3">Michael hablara con su padre.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

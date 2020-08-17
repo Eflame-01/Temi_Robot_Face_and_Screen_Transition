@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/temiFace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_eye_start_width_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.165" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_eye_end_width_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".385" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_eye_start_width_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".615" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_eye_end_width_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="1035dp"
+            app:layout_constraintGuide_percent=".835" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/eyebrow_height_start_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/eye_start_height_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.31" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/eye_end_height_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".68" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mouth_start_height_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mouth_end_height_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_half_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horiizontal_half_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".5" />
+
+        <ImageView
+            android:id="@+id/left_eye"
+            android:layout_width="284dp"
+            android:layout_height="284dp"
+            app:layout_constraintBottom_toTopOf="@+id/eye_end_height_guide"
+            app:layout_constraintEnd_toStartOf="@+id/left_eye_end_width_guide"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toEndOf="@+id/left_eye_start_width_guide"
+            app:layout_constraintTop_toBottomOf="@+id/eye_start_height_guide"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/left_pupil"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="@+id/left_eye"
+            app:layout_constraintEnd_toStartOf="@+id/left_eye_end_width_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_eye"
+            app:layout_constraintTop_toTopOf="@+id/left_eye" />
+
+        <ImageView
+            android:id="@+id/right_eye"
+            android:layout_width="284dp"
+            android:layout_height="284dp"
+            app:layout_constraintBottom_toTopOf="@+id/eye_end_height_guide"
+            app:layout_constraintEnd_toStartOf="@+id/right_eye_end_width_guide"
+            app:layout_constraintStart_toEndOf="@+id/right_eye_start_width_guide"
+            app:layout_constraintTop_toBottomOf="@+id/eye_start_height_guide" />
+
+        <ImageView
+            android:id="@+id/right_pupil"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="@+id/right_eye"
+            app:layout_constraintEnd_toEndOf="@+id/right_eye"
+            app:layout_constraintStart_toStartOf="@+id/right_eye"
+            app:layout_constraintTop_toTopOf="@+id/eye_start_height_guide" />
+
+        <ImageView
+            android:id="@+id/mouth"
+            android:layout_width="297dp"
+            android:layout_height="89dp"
+            app:layout_constraintBottom_toTopOf="@+id/mouth_end_height_guide"
+            app:layout_constraintEnd_toStartOf="@+id/right_eye_start_width_guide"
+            app:layout_constraintStart_toEndOf="@+id/left_eye_end_width_guide"
+            app:layout_constraintTop_toBottomOf="@+id/mouth_start_height_guide"
+            />
+
+        <ImageView
+            android:id="@+id/left_eyebrow"
+            android:layout_width="281dp"
+            android:layout_height="202dp"
+            app:layout_constraintBottom_toTopOf="@+id/eye_start_height_guide"
+            app:layout_constraintEnd_toStartOf="@+id/left_eye_end_width_guide"
+            app:layout_constraintStart_toStartOf="@+id/left_eye_start_width_guide"
+            app:layout_constraintTop_toTopOf="@+id/eyebrow_height_start_guide"
+            />
+
+        <ImageView
+            android:id="@+id/right_eyebrow"
+            android:layout_width="278dp"
+            android:layout_height="206dp"
+            app:layout_constraintBottom_toTopOf="@+id/eye_start_height_guide"
+            app:layout_constraintEnd_toStartOf="@+id/right_eye_end_width_guide"
+            app:layout_constraintStart_toStartOf="@+id/right_eye_start_width_guide"
+            app:layout_constraintTop_toTopOf="@+id/eyebrow_height_start_guide"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

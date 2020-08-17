@@ -1,0 +1,2 @@
+include ':app', ':temiface-debug', ':temiface'
+rootProject.name='Temi Demo for February-19'

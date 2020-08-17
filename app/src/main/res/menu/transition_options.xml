@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/transition_to_corner"
+        android:title="Transition: To Corner"/>
+    <item
+        android:id="@+id/transition_slide_left_and_return"
+        android:title="Transition: Slide Left And Return"/>
+    <item
+        android:id="@+id/transition_shrink"
+        android:title="Transition: Shrink"/>
+    <item
+        android:id="@+id/transition_eyes_to_bottom"
+        android:title="Transition: Eyes To Bottom"/>
+    <item
+        android:id="@+id/transition_fade"
+        android:title="Transition: Fade"/>
+    <item
+        android:id="@+id/end_demonstrations"
+        android:title="End Demonstrations"/>
+
+
+</menu>
