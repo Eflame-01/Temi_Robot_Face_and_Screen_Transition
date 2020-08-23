@@ -1,0 +1,52 @@
+This file shows you how to use the Face class, and any TODOs that need to be fixed.
+
+1. How to use the Face class
+    The Face class needs to be initialized in an activity that contains the temi-face fragment in order to use it. These
+    will be any of the Transition classes in the temidemoforfebruary_19 package, but it might be best to
+    store it in the Abstract class TransitionDemo or  the TransitionStart class.
+
+    Because it needs the temi-face fragment when initialized, it needs to be placed AFTER the Fragment is created,
+    which is usually after onCreate(), but you can check the Fragment pipeline to see the exact moment the Fragment
+    is created.
+
+    To initialize the Face, you simply type in:
+        Face face = new Face(YourCurrentActivity.this);
+
+    The Face class also uses tons of variables in order to keep track of everything. Most if not all of these variables
+    are private/protected, so in order to access most of these, you would need to use the getter and setter methods:
+     - public Activity getActivity()
+     - public void setActivity(Activity activity)
+     - public Mood getMood()
+     - public void setMood(Mood mood)
+     - public int getBaseColor()
+     - private void setBaseColor(int color)
+     - public Timer getTimer()
+     - public void setTimer(Timer timer)
+     - public GazeThread getGazeThread()
+     - public void setGazeThread(GazeThread gazeThread)
+
+    The Face class will be responsible for changing the emotions of the robot, the blinking of the
+    robot, the color of the robot's facial features, and the gaze aversions the robot makes.
+    To perform any of these actions, I have created public methods that you can access to get to these
+    features:
+    - changeColorTo(int colorVal): Takes the color value in the R.values.colors file.
+    - changeFaceTo(Mood mood): Takes in a mood from an mood enum and changes face based on values preset in the enum.
+    - changeGazeTo(int gazeType): Takes in the gaze type values in the Gaze class  (-1 to 4)
+    - changeToBlink(): calls the blink function. This makes the robot blink on command and not on a timer.
+
+2. TODOs for the Face
+    - Facial Transition paths are "Limited", needs a buff.
+      The way the Face animates a new expression is by using something called a FacialExpressionGraph for each facial
+      feature(left eyebrow, right eyebrow, left eye, right eye, and mouth) and the mood enum values to find a
+      path between the current values to the new mood's values, and in finding it, creates a series of frames to animate
+      the face. The way the FacialExpressionGraph only finds ONE path in the graph. However, there can be sometimes be
+      multiple paths to a value in the graph, and the class doesn't account for this. If you wanted more facial expressions
+      and thus varying transitions, you would need to fix the function findPathsInGraph(int sourceID, int destinationID).
+
+    - Cannot Gaze and Change Expression at the same time. Needs to cancel worker thread before changing expression better.
+      The way gazing works, it uses a worker thread to perform the background functions that allow the robot to hold on a gaze
+      type while performing work on the UI Thread to change the direction of the eyes. The eyes change direction by adding image
+      Views for pupils, and moving the imageViews around for smoother effect rather than creating sprites and editing the
+      FacialExpressionGraph to account for pupils. Because of this, trying to change the emotion while the robot is gazing can
+      cause both pupils in the imageViews as well as the pupils in the sprites to pop up on screen, making the robot look creepy.
+      To stop this from happening I added a conditional statement that forbid the robot from changing its emotion while in gazeMode.
