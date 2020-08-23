@@ -1,0 +1,16 @@
+This file shows you how to use the Gaze class, and any TODOs that need to be fixed.
+
+1. How to use the Transition App
+    This app works by means of the Transition Activities. These Activities has three major components:
+    - content: what's hidden under the face
+    - face fragment: the fragment that houses the imageViews for the faces
+    - frame: the frame that houses both content and face fragment.
+
+    The App starts off with TransitionStart. When you hold down on the screen, it will create a pop
+    up menu that gives you a list of other transition options for you to use. Each option takes you
+    to a another Transition Activity that will perform there own function based on what they are called.
+    After performing the actions in those Transition Activities, it will take you back to TransitionStart
+    to perform another transition.
+
+    Short taps on the screen will cause the robot to blink. Every 5 short taps will cause the robot to
+    insist you perform a long click to check out the transition options.
