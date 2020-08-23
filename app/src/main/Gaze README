@@ -1,0 +1,41 @@
+This file shows you how to use the Gaze class, and any TODOs that need to be fixed.
+
+1. How to use the Gaze class
+    You can initialize the Gaze class anywhere you want in the java files:
+    - Gaze gaze = new Gaze()
+
+    You can also call on the function performGaze(int gazeType) that will create a GazeThread to
+    make the robot perform a gaze.
+    - gaze.performGaze(int gazeType)
+
+    This will work AS LONG AS THE STATIC FACE class is still initialized
+    in the Transition classes, because it uses the Face from the activity you are in to perform the gazes. This
+    is mainly why I would recommend using the Face class and its function changeGazeTo(int gazeType)
+    instead, because at least that way you know that the face is already initialized.
+
+2. How the Gaze class works
+    For the most part, the Gaze class has the private methods that are necessary for making sure the robot
+    faces the right direction for the gaze, and for the proper duration.
+
+    Gaze also has static final variables that the GazeThread uses to determine which gaze to use.
+    - COGNITIVE: 1
+    - INTIMACY_REGULATION: 2
+    - FLOOR_MANAGEMENT: 3
+    - STRAIGHT: 0
+    - CANCEL = -1
+
+    The GazeThread is what is actually used to perform the gaze aversions. The GazeThread has a handler that
+    it uses to check for messages in the MessageQueue. when you call a function to perform a gaze, it actually
+    takes a gazeThread and sends an empty message with the gazeType that you want, and the Looper loops through
+    the MessageQueue to find it and perform the gaze using GazeTask
+
+    The GazeTask is just a way for the robot's face to display the pupils that will move up down left and right,
+    as well as use the worker thread to hold the face in that position for the duration of the gaze.
+
+3. TODOs for the Gaze
+    - GazeThread uses static Face variable.
+      I don't like this. variables that uses imageViews generally shouldn't be static, because this
+      can cause memory leaks. To fix something like this, you would have to create the instance of the
+      face in the GazeThread class and use that to perform the UI changes in the activity. I haven;t
+      gotten around to seeing how something like that would actually work, but I would imagine it requiring
+      another parameterized constructor to keep the Face from changing moods when switching to a new face.
